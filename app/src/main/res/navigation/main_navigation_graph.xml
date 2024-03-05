@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/categoryFragment">
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.wildantechnoart.newsapp.view.CategoryFragment"
+        android:label="@string/label_fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_sourcesFragment"
+            app:destination="@id/sourcesFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/sourcesFragment"
+        android:name="com.wildantechnoart.newsapp.view.SourcesFragment"
+        android:label="@string/label_fragment_source"
+        tools:layout="@layout/fragment_source" >
+        <action
+            android:id="@+id/action_sourcesFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="categoryId"
+            app:argType="string" />
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.wildantechnoart.newsapp.view.ArticlesFragment"
+        android:label="@string/label_fragment_articles"
+        tools:layout="@layout/fragment_articles" >
+        <argument
+            android:name="sourceId"
+            app:argType="string" />
+        <argument
+            android:name="sourceName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_articlesFragment_to_articleViewActivity"
+            app:destination="@id/articleViewActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/articleViewActivity"
+        android:name="com.wildantechnoart.newsapp.view.ArticleViewActivity"
+        android:label="activity_article_view"
+        tools:layout="@layout/activity_article_view" />
+</navigation>

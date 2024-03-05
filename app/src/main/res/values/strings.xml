@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="request_none_data">.................</string>
+    <string name="message_if_disconnect">Not Connected to the Internet</string>
+    <string name="message_if_error">An error occurred, please try again</string>
+    <string name="message_if_not_data">No Result</string>
+    <string name="host_nav_main">navigation</string>
+    <string name="label_fragment_category">List News Category</string>
+    <string name="action_detail">Detail</string>
+    <string name="label_fragment_detail">Detail News</string>
+    <string name="label_show_all">Show All</string>
+    <string name="action_show_article">Show Articles</string>
+    <string name="image">image</string>
+    <string name="action_show_detail">Show Detail</string>
+    <string name="label_fragment_source">List Media</string>
+    <string name="label_fragment_articles">List Articles</string>
+    <string name="message_if_news_not_found">No news can be displayed</string>
+    <string name="search_article_name">Search Article Name</string>
+    <string name="search_media_name">Search Media Name</string>
+</resources>
