@@ -1,6 +1,7 @@
 # Mandatory Task
 # OPTION 2
-Create a mobile native application to show news using API from https://newsapi.org User stories:
+Create a mobile native application to show news using API from https://newsapi.org
+User stories:
 1. Create a screen to display the list of news categories.
 2. Show news sources when user click one of the news category.
 3. Show news articles when user click one of the news source.
